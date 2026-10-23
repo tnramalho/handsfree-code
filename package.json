@@ -1,0 +1,61 @@
+{
+  "name": "handsfree-code",
+  "version": "0.1.0",
+  "description": "Talk to Claude Code by voice, hands-free and eyes-free: wake word, spoken confirmations for risky actions, interruptible. Portuguese (Brazil) first.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "test": "npm run build && node --test dist/*.test.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm test"
+  },
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.3.309"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2"
+  },
+  "type": "module",
+  "bin": {
+    "handsfree": "dist/index.js",
+    "voz": "dist/index.js"
+  },
+  "private": false,
+  "keywords": [
+    "claude-code",
+    "voice",
+    "speech",
+    "hands-free",
+    "accessibility",
+    "cli",
+    "agent",
+    "coding-assistant",
+    "wake-word",
+    "driving"
+  ],
+  "license": "MIT",
+  "author": "Thiago Ramalho",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tnramalho/handsfree-code.git"
+  },
+  "homepage": "https://github.com/tnramalho/handsfree-code#readme",
+  "bugs": {
+    "url": "https://github.com/tnramalho/handsfree-code/issues"
+  },
+  "files": [
+    "dist",
+    "!dist/*.test.*",
+    "stt_worker.py",
+    "README.md",
+    "README.pt-BR.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "os": [
+    "darwin"
+  ]
+}

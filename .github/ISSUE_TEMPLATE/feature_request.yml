@@ -1,0 +1,29 @@
+name: Feature request
+description: An idea to make hands-free coding better.
+labels: [enhancement, triage]
+body:
+  - type: textarea
+    id: situation
+    attributes:
+      label: The situation
+      description: Where were you and what were you trying to do without a screen?
+      placeholder: "Driving, I wanted it to read me the failing test names."
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: checkboxes
+    id: roadmap
+    attributes:
+      label: Checks
+      options:
+        - label: I checked ROADMAP.md and open issues.
+          required: true

@@ -1,0 +1,53 @@
+name: Bug report
+description: Something doesn't work as documented.
+labels: [bug, triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. For security problems, don't use this form: see SECURITY.md.
+        Remove API keys, personal paths and private code from anything you paste.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you said, what you expected, what it did instead.
+      placeholder: |
+        I said "James, stop" while it was talking. It kept talking for the whole answer.
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Terminal output
+      description: The lines around the problem.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: handsfree-code version
+      placeholder: "0.1.0 (or commit)"
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: macOS, chip, Node version
+      placeholder: "macOS 26.1, M3, Node 22.23.4"
+    validations:
+      required: true
+  - type: input
+    id: audio
+    attributes:
+      label: Microphone and speaker
+      placeholder: "MacBook mic + car Bluetooth"
+  - type: dropdown
+    id: providers
+    attributes:
+      label: Voice and transcription
+      options:
+        - OpenAI key set
+        - No keys (macOS voice + local Whisper)
+        - ElevenLabs voice
+    validations:
+      required: true

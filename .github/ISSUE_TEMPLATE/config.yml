@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and ideas
+    url: https://github.com/tnramalho/handsfree-code/discussions
+    about: Ask, share a setup, or discuss an idea before opening an issue.
+  - name: Report a security vulnerability
+    url: https://github.com/tnramalho/handsfree-code/security/advisories/new
+    about: Please report security problems privately.

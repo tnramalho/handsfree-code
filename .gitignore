@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.tgz
+.DS_Store
+# Local secrets and recordings: never commit
+*.env
+!examples/*.env.example
+config.env
+*.wav
+*.mp3
+*.aiff
+__pycache__/
